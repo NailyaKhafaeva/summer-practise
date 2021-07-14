@@ -4,10 +4,6 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-
-
-
-
 public class SimpleGUI extends JFrame {
 
     private JButton button = new JButton("OK");
@@ -26,8 +22,6 @@ public class SimpleGUI extends JFrame {
     private JTextField de = new JTextField("", 4);
     private JTextField df = new JTextField("", 4);
     private JTextField ef = new JTextField("", 4);
-
-
 
     private JLabel label = new JLabel("Input:");
     private JLabel v1 = new JLabel("    A");
@@ -67,8 +61,6 @@ public class SimpleGUI extends JFrame {
     private JLabel DE = new JLabel("  --- ");
     private JLabel DF = new JLabel("  --- ");
     private JLabel EF = new JLabel("  --- ");
-
-
 
     public SimpleGUI(){
         super("Adjacency matrix");
@@ -173,8 +165,6 @@ public class SimpleGUI extends JFrame {
 
             log += "\nResult = "+Integer.toString(result)+"\n";
             JOptionPane.showMessageDialog(null, log, "Result", JOptionPane.PLAIN_MESSAGE);
-
-
 
         }
     }
