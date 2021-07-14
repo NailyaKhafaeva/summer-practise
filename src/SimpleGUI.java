@@ -3,6 +3,7 @@ package com.company;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import java.util.Arrays;
 
 public class SimpleGUI extends JFrame {
 
@@ -153,7 +154,7 @@ public class SimpleGUI extends JFrame {
 
             Edge[] edges = edgeCreate();
             DSF dsf = new DSF(15);
-            sort(edges, 15);
+            Arrays.sort(edges);
 
             int result = 0;
             String log = "";
@@ -167,27 +168,6 @@ public class SimpleGUI extends JFrame {
             JOptionPane.showMessageDialog(null, log, "Result", JOptionPane.PLAIN_MESSAGE);
 
         }
-    }
-
-    public static void sort(Edge[] edges, int size) {
-        boolean needIteration = true;
-        while (needIteration) {
-            needIteration = false; {
-                for (int i = 1; i < size; i++) {
-                    if (edges[i].w < edges[i - 1].w) {
-                        swap(edges, i, i - 1);
-                        needIteration = true;
-                    }
-                }
-            }
-        }
-
-    }
-
-    private static void swap(Edge[] array, int ind1, int ind2) {
-        Edge tmp = array[ind1];
-        array[ind1] = array[ind2];
-        array[ind2] = tmp;
     }
 
     public Edge[] edgeCreate() {
